@@ -35,6 +35,8 @@
 **/.vs/
 **/x64/
 **.vcxproj.user
+**.vcxproj.filters
+**.vcxproj
 **.user
 **.log
 
