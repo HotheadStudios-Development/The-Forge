@@ -86,9 +86,15 @@ project "Forge-Renderer"
 		"SpirvCross",
 	}
 
+	copyDir = ("%{wks.location}/Build_Data/bin/" .. outputDir .. "/FaE_Editor")
+
 	postbuildcommands
 	{
-		"{COPYFILE} $(SolutionDir)Common_3/Graphics/ThirdParty/OpenSource/ags/ags_lib/lib/amd_ags_x64.dll $(targetdir)",
+		"{COPYFILE} \"%{wks.location}/FAE_Engine/vendor/The-Forge/Common_3/Graphics/ThirdParty/OpenSource/ags/ags_lib/lib/amd_ags_x64.dll\" \"" .. copyDir .. "/amd_ags_x64.dll\"",
+		"{COPYFILE} \"%{wks.location}/FAE_Engine/vendor/The-Forge/Common_3/OS/ThirdParty/OpenSource/winpixeventruntime/bin/WinPixEventRuntime.dll\" \"" .. copyDir .. "/WinPixEventRunTime.dll\"",
+		"{COPYFILE} \"%{wks.location}/FAE_Engine/vendor/The-Forge/Common_3/Graphics/ThirdParty/OpenSource/DirectXShaderCompiler/bin/x64/dxcompiler.dll\" \"" .. copyDir .. "/dxcompiler.dll\"",
+		"{COPYFILE} \"%{wks.location}/FAE_Engine/vendor/The-Forge/Common_3/Graphics/ThirdParty/OpenSource/DirectXShaderCompiler/bin/x64/dxil.dll\" \"" .. copyDir .. "/dxil.dll\"",
+		-- "{COPYFILE} %{Library.SDLL2} \"%{cfg.buildtarget.directory}/\""
 		-- xcopy "$(SolutionDir)..\..\..\..\..\Common_3\OS\ThirdParty\OpenSource\winpixeventruntime\bin\WinPixEventRuntime.dll" "$(TargetDir)WinPixEventRunTime.dll"* /Y /D
 		-- xcopy "$(SolutionDir)..\..\..\..\..\Common_3\Graphics\ThirdParty\OpenSource\DirectXShaderCompiler\bin\x64\dxcompiler.dll" "$(TargetDir)dxcompiler.dll"*/Y /D
 		-- xcopy "$(SolutionDir)..\..\..\..\..\Common_3\Graphics\ThirdParty\OpenSource\DirectXShaderCompiler\bin\x64\dxil.dll" "$(TargetDir)dxil.dll"*/Y /D"
