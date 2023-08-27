@@ -1,0 +1,196 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Dist|x64">
+      <Configuration>Dist</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{BC009544-A8CE-884A-9162-F9707DCF64AF}</ProjectGuid>
+    <IgnoreWarnCompileDuplicatedFilename>true</IgnoreWarnCompileDuplicatedFilename>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>Forge-Renderer</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <CharacterSet>Unicode</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <CharacterSet>Unicode</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Dist|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <CharacterSet>Unicode</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Dist|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <OutDir>..\..\..\..\..\Build_Data\bin\Debug-windows-x86_64\FaE_Engine\</OutDir>
+    <IntDir>..\..\..\..\..\Build_Data\bin-obj\Debug-windows-x86_64\FaE_Engine\Debug\Forge-Renderer\</IntDir>
+    <TargetName>Renderer</TargetName>
+    <TargetExt>.lib</TargetExt>
+    <LibraryPath>C:\Users\Lochlan Perry-Scott\Desktop\GAME DEV\Hothead Studios\FAE Engine\vendor\Vulkan-SDK\1.3.224.0\Lib;..\..\..\..\..\Build_Data\bin\Debug-windows-x86_64\FaE_Engine;$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <OutDir>..\..\..\..\..\Build_Data\bin\Release-windows-x86_64\FaE_Engine\</OutDir>
+    <IntDir>..\..\..\..\..\Build_Data\bin-obj\Release-windows-x86_64\FaE_Engine\Release\Forge-Renderer\</IntDir>
+    <TargetName>Renderer</TargetName>
+    <TargetExt>.lib</TargetExt>
+    <LibraryPath>C:\Users\Lochlan Perry-Scott\Desktop\GAME DEV\Hothead Studios\FAE Engine\vendor\Vulkan-SDK\1.3.224.0\Lib;..\..\..\..\..\Build_Data\bin\Release-windows-x86_64\FaE_Engine;$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Dist|x64'">
+    <OutDir>..\..\..\..\..\Build_Data\bin\Dist-windows-x86_64\FaE_Engine\</OutDir>
+    <IntDir>..\..\..\..\..\Build_Data\bin-obj\Dist-windows-x86_64\FaE_Engine\Dist\Forge-Renderer\</IntDir>
+    <TargetName>Renderer</TargetName>
+    <TargetExt>.lib</TargetExt>
+    <LibraryPath>C:\Users\Lochlan Perry-Scott\Desktop\GAME DEV\Hothead Studios\FAE Engine\vendor\Vulkan-SDK\1.3.224.0\Lib;..\..\..\..\..\Build_Data\bin\Dist-windows-x86_64\FaE_Engine;$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>FAE_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:\Users\Lochlan Perry-Scott\Desktop\GAME DEV\Hothead Studios\FAE Engine\vendor\Vulkan-SDK\1.3.224.0\Include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+      <Optimization>Disabled</Optimization>
+      <MinimalRebuild>false</MinimalRebuild>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+    <Lib>
+      <AdditionalDependencies>amd_ags_x64.lib;nvapi64.lib;dxcompiler.lib;WinPixEventRuntime.lib;SpirvTools.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>..\..\Common_3\OS\ThirdParty\OpenSource\winpixeventruntime\bin;..\..\Common_3\Graphics\ThirdParty\OpenSource\DirectXShaderCompiler\lib\x64;..\..\Common_3\Graphics\ThirdParty\OpenSource\ags\ags_lib\lib;..\..\Common_3\Graphics\ThirdParty\OpenSource\nvapi\amd64;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>FAE_RELEASE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:\Users\Lochlan Perry-Scott\Desktop\GAME DEV\Hothead Studios\FAE Engine\vendor\Vulkan-SDK\1.3.224.0\Include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <Optimization>Full</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <MinimalRebuild>false</MinimalRebuild>
+      <StringPooling>true</StringPooling>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+    <Lib>
+      <AdditionalDependencies>amd_ags_x64.lib;nvapi64.lib;dxcompiler.lib;WinPixEventRuntime.lib;SpirvTools.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>..\..\Common_3\OS\ThirdParty\OpenSource\winpixeventruntime\bin;..\..\Common_3\Graphics\ThirdParty\OpenSource\DirectXShaderCompiler\lib\x64;..\..\Common_3\Graphics\ThirdParty\OpenSource\ags\ags_lib\lib;..\..\Common_3\Graphics\ThirdParty\OpenSource\nvapi\amd64;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Dist|x64'">
+    <ClCompile>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>FAE_DIST;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:\Users\Lochlan Perry-Scott\Desktop\GAME DEV\Hothead Studios\FAE Engine\vendor\Vulkan-SDK\1.3.224.0\Include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <Optimization>Full</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <MinimalRebuild>false</MinimalRebuild>
+      <StringPooling>true</StringPooling>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+    <Lib>
+      <AdditionalDependencies>amd_ags_x64.lib;nvapi64.lib;dxcompiler.lib;WinPixEventRuntime.lib;SpirvTools.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>..\..\Common_3\OS\ThirdParty\OpenSource\winpixeventruntime\bin;..\..\Common_3\Graphics\ThirdParty\OpenSource\DirectXShaderCompiler\lib\x64;..\..\Common_3\Graphics\ThirdParty\OpenSource\ags\ags_lib\lib;..\..\Common_3\Graphics\ThirdParty\OpenSource\nvapi\amd64;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\Common_3\Graphics\Direct3D11\Direct3D11CapBuilder.h" />
+    <ClInclude Include="..\..\Common_3\Graphics\Direct3D11\Direct3D11Config.h" />
+    <ClInclude Include="..\..\Common_3\Graphics\Direct3D12\Direct3D12CapBuilder.h" />
+    <ClInclude Include="..\..\Common_3\Graphics\Direct3D12\Direct3D12Config.h" />
+    <ClInclude Include="..\..\Common_3\Graphics\Direct3D12\Direct3D12Hooks.h" />
+    <ClInclude Include="..\..\Common_3\Graphics\GraphicsConfig.h" />
+    <ClInclude Include="..\..\Common_3\Graphics\Interfaces\IGraphics.h" />
+    <ClInclude Include="..\..\Common_3\Graphics\Interfaces\IRay.h" />
+    <ClInclude Include="..\..\Common_3\Graphics\Interfaces\IShaderReflection.h" />
+    <ClInclude Include="..\..\Common_3\Graphics\ThirdParty\OpenSource\VulkanMemoryAllocator\VulkanMemoryAllocator.h" />
+    <ClInclude Include="..\..\Common_3\Graphics\ThirdParty\OpenSource\ags\AgsHelper.h" />
+    <ClInclude Include="..\..\Common_3\Graphics\ThirdParty\OpenSource\nvapi\NvApiHelper.h" />
+    <ClInclude Include="..\..\Common_3\Graphics\Vulkan\VulkanCapsBuilder.h" />
+    <ClInclude Include="..\..\Common_3\Graphics\Vulkan\VulkanConfig.h" />
+    <ClInclude Include="..\..\Common_3\Resources\ResourceLoader\Interfaces\IResourceLoader.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\Common_3\Graphics\CommonShaderReflection.cpp" />
+    <ClCompile Include="..\..\Common_3\Graphics\DependencyTracking.cpp" />
+    <ClCompile Include="..\..\Common_3\Graphics\Direct3D11\Direct3D11.cpp" />
+    <ClCompile Include="..\..\Common_3\Graphics\Direct3D11\Direct3D11Raytracing.cpp" />
+    <ClCompile Include="..\..\Common_3\Graphics\Direct3D11\Direct3D11ShaderReflection.cpp" />
+    <ClCompile Include="..\..\Common_3\Graphics\Direct3D12\Direct3D12.cpp" />
+    <ClCompile Include="..\..\Common_3\Graphics\Direct3D12\Direct3D12Hooks.cpp" />
+    <ClCompile Include="..\..\Common_3\Graphics\Direct3D12\Direct3D12Raytracing.cpp" />
+    <ClCompile Include="..\..\Common_3\Graphics\Direct3D12\Direct3D12ShaderReflection.cpp" />
+    <ClCompile Include="..\..\Common_3\Graphics\GPUConfig.cpp" />
+    <ClCompile Include="..\..\Common_3\Graphics\Graphics.cpp" />
+    <ClCompile Include="..\..\Common_3\Graphics\Vulkan\Vulkan.cpp" />
+    <ClCompile Include="..\..\Common_3\Graphics\Vulkan\VulkanRaytracing.cpp" />
+    <ClCompile Include="..\..\Common_3\Graphics\Vulkan\VulkanShaderReflection.cpp" />
+    <ClCompile Include="..\..\Common_3\Resources\ResourceLoader\ResourceLoader.cpp" />
+    <ClCompile Include="..\..\Common_3\Resources\ResourceLoader\ThirdParty\OpenSource\meshoptimizer\src\allocator.cpp" />
+    <ClCompile Include="..\..\Common_3\Resources\ResourceLoader\ThirdParty\OpenSource\meshoptimizer\src\indexgenerator.cpp" />
+    <ClCompile Include="..\..\Common_3\Resources\ResourceLoader\ThirdParty\OpenSource\meshoptimizer\src\overdrawoptimizer.cpp" />
+    <ClCompile Include="..\..\Common_3\Resources\ResourceLoader\ThirdParty\OpenSource\meshoptimizer\src\vcacheoptimizer.cpp" />
+    <ClCompile Include="..\..\Common_3\Resources\ResourceLoader\ThirdParty\OpenSource\meshoptimizer\src\vfetchoptimizer.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Tools\SpirvCross.vcxproj">
+      <Project>{434A39C2-2F02-7B0F-9809-546B84E01500}</Project>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
