@@ -58,13 +58,15 @@ project "Forge-Renderer"
 		"%{IncludeDir.Forge}/Common_3/Graphics/ThirdParty/OpenSource/DirectXShaderCompiler/lib/x64",
 		"%{IncludeDir.Forge}/Common_3/Graphics/ThirdParty/OpenSource/ags/ags_lib/lib",
 		"%{IncludeDir.Forge}/Common_3/Graphics/ThirdParty/OpenSource/nvapi/amd64",
+
+		"$(targetdir)",
 	}
 
 	syslibdirs
 	{
 		"%{LibraryDir.VulkanSDK}",
-
-		("%{wks.location}/Build_Data/bin/" .. outputDir .. "/%{wks.name}"),
+		"$(targetdir)",
+		-- ("%{wks.location}/Build_Data/bin/" .. outputDir .. "/%{wks.name}"),
 	}
 
 	includedirs
@@ -84,8 +86,18 @@ project "Forge-Renderer"
 		"SpirvCross",
 	}
 
+	postbuildcommands
+	{
+		"{COPYFILE} $(SolutionDir)Common_3/Graphics/ThirdParty/OpenSource/ags/ags_lib/lib/amd_ags_x64.dll $(targetdir)",
+		-- xcopy "$(SolutionDir)..\..\..\..\..\Common_3\OS\ThirdParty\OpenSource\winpixeventruntime\bin\WinPixEventRuntime.dll" "$(TargetDir)WinPixEventRunTime.dll"* /Y /D
+		-- xcopy "$(SolutionDir)..\..\..\..\..\Common_3\Graphics\ThirdParty\OpenSource\DirectXShaderCompiler\bin\x64\dxcompiler.dll" "$(TargetDir)dxcompiler.dll"*/Y /D
+		-- xcopy "$(SolutionDir)..\..\..\..\..\Common_3\Graphics\ThirdParty\OpenSource\DirectXShaderCompiler\bin\x64\dxil.dll" "$(TargetDir)dxil.dll"*/Y /D"
+	}
+
 	filter "system:windows"
 		systemversion "latest"
+
+		
 
 	filter "configurations:Debug"
 		defines "FAE_DEBUG"
