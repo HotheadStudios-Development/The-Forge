@@ -53,20 +53,20 @@
     <ProjectGuid>{DB6193E0-3C12-450F-B344-DC4DAED8C421}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
     <RootNamespace>Samples_GLFW</RootNamespace>
-    <WindowsTargetPlatformVersion>10.0.17763.0</WindowsTargetPlatformVersion>
+    <WindowsTargetPlatformVersion>10.0.22621.0</WindowsTargetPlatformVersion>
     <ProjectName>Renderer</ProjectName>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
     <ConfigurationType>StaticLibrary</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
-    <PlatformToolset>v141</PlatformToolset>
+    <PlatformToolset>v143</PlatformToolset>
     <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
     <ConfigurationType>StaticLibrary</ConfigurationType>
     <UseDebugLibraries>false</UseDebugLibraries>
-    <PlatformToolset>v141</PlatformToolset>
+    <PlatformToolset>v143</PlatformToolset>
     <WholeProgramOptimization>true</WholeProgramOptimization>
     <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
@@ -122,10 +122,10 @@
       <AdditionalLibraryDirectories>$(SolutionDir)..\..\..\Common_3\Graphics\ThirdParty\OpenSource\ags\ags_lib\lib;$(SolutionDir)..\..\..\Common_3\Graphics\ThirdParty\OpenSource\nvapi\amd64;$(SolutionDir)..\..\..\Common_3\Graphics\ThirdParty\OpenSource\DirectXShaderCompiler\lib\x64;$(SolutionDir)..\..\..\Common_3\OS\ThirdParty\OpenSource\winpixeventruntime\bin\;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
     </Lib>
     <PostBuildEvent>
-      <Command>xcopy "$(SolutionDir)..\..\..\Common_3\Graphics\ThirdParty\OpenSource\ags\ags_lib\lib\amd_ags_x64.dll" "$(TargetDir)amd_ags_x64.dll"* /Y /D
-xcopy "$(SolutionDir)..\..\..\Common_3\OS\ThirdParty\OpenSource\winpixeventruntime\bin\WinPixEventRuntime.dll" "$(TargetDir)WinPixEventRunTime.dll"* /Y /D
-xcopy "$(SolutionDir)\..\..\..\Common_3\Graphics\ThirdParty\OpenSource\DirectXShaderCompiler\bin\x64\dxcompiler.dll" "$(TargetDir)dxcompiler.dll"*/Y /D
-xcopy "$(SolutionDir)\..\..\..\Common_3\Graphics\ThirdParty\OpenSource\DirectXShaderCompiler\bin\x64\dxil.dll" "$(TargetDir)dxil.dll"*/Y /D</Command>
+      <Command>xcopy "$(ProjectDir)..\..\..\..\..\Common_3\Graphics\ThirdParty\OpenSource\ags\ags_lib\lib\amd_ags_x64.dll" "$(TargetDir)amd_ags_x64.dll"* /Y /D
+xcopy "$(ProjectDir)..\..\..\..\..\Common_3\OS\ThirdParty\OpenSource\winpixeventruntime\bin\WinPixEventRuntime.dll" "$(TargetDir)WinPixEventRunTime.dll"* /Y /D
+xcopy "$(ProjectDir)..\..\..\..\..\Common_3\Graphics\ThirdParty\OpenSource\DirectXShaderCompiler\bin\x64\dxcompiler.dll" "$(TargetDir)dxcompiler.dll"*/Y /D
+xcopy "$(ProjectDir)..\..\..\..\..\Common_3\Graphics\ThirdParty\OpenSource\DirectXShaderCompiler\bin\x64\dxil.dll" "$(TargetDir)dxil.dll"*/Y /D</Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
@@ -160,10 +160,10 @@ xcopy "$(SolutionDir)\..\..\..\Common_3\Graphics\ThirdParty\OpenSource\DirectXSh
       <AdditionalLibraryDirectories>$(SolutionDir)..\..\..\Common_3\Graphics\ThirdParty\OpenSource\ags\ags_lib\lib;$(SolutionDir)..\..\..\Common_3\Graphics\ThirdParty\OpenSource\nvapi\amd64;$(SolutionDir)\..\..\..\Common_3\Graphics\ThirdParty\OpenSource\DirectXShaderCompiler\lib\x64;$(SolutionDir)\..\..\..\Common_3\OS\ThirdParty\OpenSource\winpixeventruntime\bin\;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
     </Lib>
     <PostBuildEvent>
-      <Command>xcopy "$(SolutionDir)..\..\..\Common_3\Graphics\ThirdParty\OpenSource\ags\ags_lib\lib\amd_ags_x64.dll" "$(TargetDir)amd_ags_x64.dll"* /Y /D
-xcopy "$(SolutionDir)..\..\..\Common_3\OS\ThirdParty\OpenSource\winpixeventruntime\bin\WinPixEventRuntime.dll" "$(TargetDir)WinPixEventRunTime.dll"* /Y /D
-xcopy "$(SolutionDir)\..\..\..\Common_3\Graphics\ThirdParty\OpenSource\DirectXShaderCompiler\bin\x64\dxcompiler.dll" "$(TargetDir)dxcompiler.dll"*/Y /D
-xcopy "$(SolutionDir)\..\..\..\Common_3\Graphics\ThirdParty\OpenSource\DirectXShaderCompiler\bin\x64\dxil.dll" "$(TargetDir)dxil.dll"*/Y /D</Command>
+      <Command>xcopy "$(ProjectDir)..\..\..\..\..\Common_3\Graphics\ThirdParty\OpenSource\ags\ags_lib\lib\amd_ags_x64.dll" "$(TargetDir)amd_ags_x64.dll"* /Y /D
+xcopy "$(ProjectDir)..\..\..\..\..\Common_3\OS\ThirdParty\OpenSource\winpixeventruntime\bin\WinPixEventRuntime.dll" "$(TargetDir)WinPixEventRunTime.dll"* /Y /D
+xcopy "$(ProjectDir)..\..\..\..\..\Common_3\Graphics\ThirdParty\OpenSource\DirectXShaderCompiler\bin\x64\dxcompiler.dll" "$(TargetDir)dxcompiler.dll"*/Y /D
+xcopy "$(ProjectDir)..\..\..\..\..\Common_3\Graphics\ThirdParty\OpenSource\DirectXShaderCompiler\bin\x64\dxil.dll" "$(TargetDir)dxil.dll"*/Y /D</Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

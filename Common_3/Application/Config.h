@@ -28,6 +28,8 @@
 	#include EXTERNAL_CONFIG_FILEPATH
 #else
 
+#include <wchar.h>
+
 #include <stdint.h>
 #include <stdlib.h>
 
