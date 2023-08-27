@@ -35,10 +35,12 @@
 **/.vs/
 **/x64/
 **.vcxproj.user
-**.vcxproj.filters
-**.vcxproj
 **.user
 **.log
+
+Projects/**.vcxproj.user
+Projects/**.vcxproj.filters
+Projects/**.vcxproj
 
 # Art
 Art/
