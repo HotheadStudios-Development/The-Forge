@@ -1,5 +1,0 @@
-loader.SetMaterialType(0)
-loader.SetAnimateCamera(1)
-loader.SetSkybox(0)
-loader.SetEnvironmentLighting(0)
-loader.SetCounter(10)
