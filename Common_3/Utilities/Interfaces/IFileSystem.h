@@ -49,6 +49,8 @@ typedef enum ResourceMount
 	RM_DEBUG,
 	/// Documents directory
 	RM_DOCUMENTS,
+	/// Custom Editor directory
+	RM_EDITOR,
 #if defined(ANDROID)
 	// System level files (/proc/ or equivalent if available)
 	RM_SYSTEM,
