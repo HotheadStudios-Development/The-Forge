@@ -6,6 +6,9 @@
 #ifndef EASTL_INTERNAL_CONFIG_H
 #define EASTL_INTERNAL_CONFIG_H
 
+// Define this as we need to manually define implementations of inf, nan, snan, denorm floating point constants.
+// Since EASTL needs to be updated in this Forge Repo to match MSVC 143.
+#define EASTL_CUSTOM_FLOAT_CONSTANTS_REQUIRED 1
 
 ///////////////////////////////////////////////////////////////////////////////
 // ReadMe
