@@ -64,3 +64,5 @@ Tools/ShaderBuildCommand/packages/
 **/ThirdParty/OpenSource/hlslparser/Ext/ShaderTranslator/packages/
 *.vcxproj
 *.filters
+/Common_3/Tools/ForgeShadingLanguage
+/Tools/python-3.11.5-embed-amd64
