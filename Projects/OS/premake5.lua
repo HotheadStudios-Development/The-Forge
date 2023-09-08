@@ -7,7 +7,12 @@ project "Forge-OS"
 
 	targetdir ("%{wks.location}/Build_Data/bin/" .. outputDir .. "/%{wks.name}")
 	objdir ("%{wks.location}/Build_Data/bin-obj/" .. outputDir .. "/%{wks.name}")
-
+	
+	rules
+	{
+		"FSLShader",
+	}
+	
 	files
 	{
 		"%{IncludeDir.Forge}/Common_3/Application/CameraController.cpp",
@@ -211,6 +216,13 @@ project "Forge-OS"
 
 	filter "system:windows"
 		systemversion "latest"
+		
+		 -- FSLShaderVars
+		 -- {
+			-- -- Language = "VULKAN",
+			-- -- ShaderDir = "%{wks.location}/Build_Data/bin/" .. outputDir .. "/%{wks.name}/_Resources/Shaders/",
+			-- -- ShaderBin = "%{wks.location}/Build_Data/bin/" .. outputDir .. "/%{wks.name}/_Resources/ShaderBin/",
+		 -- }
 
 	filter "configurations:Debug"
 		defines "FAE_DEBUG"
