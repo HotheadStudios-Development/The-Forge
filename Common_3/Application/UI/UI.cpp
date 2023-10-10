@@ -2197,7 +2197,9 @@ bool platformInitUserInterface()
 	//         - ImGuiConfigFlags_IsTouchScreen
 	//         - ImGuiConfigFlags_NavEnableKeyboard
 	io.ConfigFlags = ImGuiConfigFlags_NavEnableGamepad; 
-		
+	io.ConfigFlags = ImGuiConfigFlags_DockingEnable;
+	io.ConfigFlags = ImGuiConfigFlags_ViewportsEnable;
+
 	io.KeyMap[ImGuiKey_Tab]			= UISystemInputActions::UI_ACTION_KEY_TAB;
 	io.KeyMap[ImGuiKey_LeftArrow]	= UISystemInputActions::UI_ACTION_KEY_LEFT_ARROW;
 	io.KeyMap[ImGuiKey_RightArrow]	= UISystemInputActions::UI_ACTION_KEY_RIGHT_ARROW;
@@ -2221,6 +2223,13 @@ bool platformInitUserInterface()
 	io.KeyMap[ImGuiKey_Z]			= UISystemInputActions::UI_ACTION_KEY_Z;
 
 	pUserInterface = pAppUI;
+
+	ImGuiStyle& style = ImGui::GetStyle();
+	if (io.ConfigFlags & ImGuiConfigFlags_ViewportsEnable)
+	{
+		style.WindowRounding = 0.0f;
+		style.Colors[ImGuiCol_WindowBg].w = 1.0f;
+	}
 #endif
 
 	return true; 
