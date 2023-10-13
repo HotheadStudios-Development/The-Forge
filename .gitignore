@@ -14,7 +14,7 @@
 # Compiled Dynamic libraries
 *.so
 *.dylib
-*.dll
+Common_3/**.dll
 
 # Fortran module files
 *.mod
@@ -27,7 +27,7 @@
 *.lib
 
 # Executables
-Common_3/*.exe
+Common_3/**.exe
 *.out
 *.app
 
@@ -44,6 +44,7 @@ Projects/**.vcxproj
 
 # Art
 Art/
+*.zip
 
 # Binary Shaders
 **/PCDX12/Binary/
