@@ -76,7 +76,10 @@ static UIComponent* pToggleVSyncComponent = NULL;
 static UIComponent* pReloadShaderComponent = NULL;
 static UIWidget*    pSwitchComponentLabelWidget = NULL;
 static UIWidget*    pSelectApUIWidget = NULL; 
-static uint32_t     gSelectedApiIndex = 0; 
+static uint32_t     gSelectedApiIndex = 0;
+
+// CUSTOM
+static UIComponent* pDockspaceComponent = NULL;
 
 // Renderer.cpp
 extern RendererApi gSelectedRendererApi; 
@@ -426,7 +429,7 @@ int WindowsMain(int argc, char** argv, IApp* app)
 		if (!pApp->Init())
 			return EXIT_FAILURE;
 
-		setupPlatformUI(pSettings->mWidth, pSettings->mHeight);
+		// setupPlatformUI(pSettings->mWidth, pSettings->mHeight);
 		pSettings->mInitialized = true;
 
 		if (!pApp->Load(&gReloadDescriptor))
@@ -529,7 +532,7 @@ int WindowsMain(int argc, char** argv, IApp* app)
 		}
 
 		// UPDATE BASE INTERFACES
-		updateBaseSubsystems(deltaTime); 
+		updateBaseSubsystems(deltaTime);
 
 		// UPDATE APP
 		pApp->Update(deltaTime);

@@ -2224,6 +2224,7 @@ bool platformInitUserInterface()
 
 	pUserInterface = pAppUI;
 
+	// When viewports are enabled we tweak WindowRounding/WindowBg so platform windows can look identical to regular ones.
 	ImGuiStyle& style = ImGui::GetStyle();
 	if (io.ConfigFlags & ImGuiConfigFlags_ViewportsEnable)
 	{
@@ -2287,6 +2288,7 @@ void platformUpdateUserInterface(float deltaTime)
 	guiUpdate.showDemoWindow = pUserInterface->mShowDemoUiWindow;
 
 	ImGui::SetCurrentContext(pUserInterface->context);
+	
 	// #TODO: Use window size as render-target size cannot be trusted to be the same as window size
 	ImGuiIO& io = ImGui::GetIO();
 	io.DisplaySize.x = guiUpdate.width;
@@ -2310,6 +2312,8 @@ void platformUpdateUserInterface(float deltaTime)
 	memcpy(io.NavInputs, pUserInterface->mNavInputs, sizeof(pUserInterface->mNavInputs));
 
 	ImGui::NewFrame();
+
+	ImGui::DockSpaceOverViewport(ImGui::GetMainViewport(), ImGuiDockNodeFlags_PassthruCentralNode);
 		
 	if (pUserInterface->mActive)
 	{
@@ -2381,6 +2385,7 @@ void platformUpdateUserInterface(float deltaTime)
 				pComponent->pPreProcessCallback(pComponent->pUserData);
 
 			bool result = ImGui::Begin(title, pCloseButtonActiveValue, guiWinFlags);
+
 			if (result)
 			{
 				// Setup the contextual menus
@@ -2441,8 +2446,18 @@ void platformUpdateUserInterface(float deltaTime)
 			ImGui::PopStyleVar();
 			ImGui::PopFont();
 		}
+
+		//if (io.ConfigFlags & ImGuiConfigFlags_ViewportsEnable)
+		//{
+		//	GLFWwindow* backup_current_context = (GLFWwindow*)GetWindowHandle();
+		//	ImGui::UpdatePlatformWindows();
+		//	ImGui::RenderPlatformWindowsDefault();
+		//	glfwMakeContextCurrent(backup_current_context);
+		//}
 	}
 	ImGui::EndFrame();
+
+
 
 	if (pUserInterface->mActive)
 	{
