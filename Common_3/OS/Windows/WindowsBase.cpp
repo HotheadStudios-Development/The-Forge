@@ -327,7 +327,7 @@ int WindowsMain(int argc, char** argv, IApp* app)
 
 	FileSystemInitDesc fsDesc = {};
 	fsDesc.pAppName = app->GetName();
-	fsDesc.pResourceMounts[3] = "D:\\Dev\\The-Forge\\FaE_Engine\\Core\\FAE_Editor\\_EditorAssets";
+	// fsDesc.pResourceMounts[3] = "D:\\Dev\\The-Forge\\FaE_Engine\\Core\\FAE_Editor\\_EditorAssets";
 	if (!initFileSystem(&fsDesc))
 		return EXIT_FAILURE;
 
